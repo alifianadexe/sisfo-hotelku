@@ -1,1 +1,13 @@
 C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\SisfoHotelku\bin\Debug\SisfoHotelku.exe.config
+C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\SisfoHotelku\obj\Debug\SisfoHotelku.vbprojResolveAssemblyReference.cache
+C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\SisfoHotelku\obj\Debug\SisfoHotelku.NavigationAdmin.resources
+C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\SisfoHotelku\obj\Debug\SisfoHotelku.Login.resources
+C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\SisfoHotelku\obj\Debug\SisfoHotelku.MainForm.resources
+C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\SisfoHotelku\obj\Debug\SisfoHotelku.Resources.resources
+C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\SisfoHotelku\obj\Debug\SisfoHotelku.vbproj.GenerateResource.Cache
+C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\SisfoHotelku\obj\Debug\SisfoHotelku.xml
+C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\SisfoHotelku\bin\Debug\SisfoHotelku.exe
+C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\SisfoHotelku\bin\Debug\SisfoHotelku.pdb
+C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\SisfoHotelku\bin\Debug\SisfoHotelku.xml
+C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\SisfoHotelku\obj\Debug\SisfoHotelku.exe
+C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\SisfoHotelku\obj\Debug\SisfoHotelku.pdb

@@ -40,7 +40,7 @@ Partial Class Login
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(537, 103)
+        Me.GroupBox1.Size = New System.Drawing.Size(456, 103)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Login"
@@ -50,7 +50,7 @@ Partial Class Login
         Me.Button1.BackColor = System.Drawing.Color.LimeGreen
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.Control
-        Me.Button1.Location = New System.Drawing.Point(391, 32)
+        Me.Button1.Location = New System.Drawing.Point(303, 29)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(140, 46)
         Me.Button1.TabIndex = 1
@@ -59,7 +59,7 @@ Partial Class Login
         '
         'txt_username
         '
-        Me.txt_username.Location = New System.Drawing.Point(134, 32)
+        Me.txt_username.Location = New System.Drawing.Point(67, 29)
         Me.txt_username.Name = "txt_username"
         Me.txt_username.Size = New System.Drawing.Size(230, 20)
         Me.txt_username.TabIndex = 2
@@ -67,7 +67,7 @@ Partial Class Login
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(47, 35)
+        Me.Label1.Location = New System.Drawing.Point(6, 32)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(55, 13)
         Me.Label1.TabIndex = 3
@@ -76,7 +76,7 @@ Partial Class Login
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(47, 61)
+        Me.Label2.Location = New System.Drawing.Point(6, 58)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(53, 13)
         Me.Label2.TabIndex = 5
@@ -84,7 +84,7 @@ Partial Class Login
         '
         'txt_password
         '
-        Me.txt_password.Location = New System.Drawing.Point(134, 58)
+        Me.txt_password.Location = New System.Drawing.Point(67, 55)
         Me.txt_password.Name = "txt_password"
         Me.txt_password.Size = New System.Drawing.Size(230, 20)
         Me.txt_password.TabIndex = 4
@@ -93,7 +93,7 @@ Partial Class Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(561, 126)
+        Me.ClientSize = New System.Drawing.Size(480, 126)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Login"
         Me.Text = "Login"
