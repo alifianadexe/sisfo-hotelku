@@ -72,6 +72,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\ManagementRoom.Designer.vb">
+      <DependentUpon>ManagementRoom.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManagementRoom.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\ManagementTypeRoom.Designer.vb">
+      <DependentUpon>ManagementTypeRoom.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManagementTypeRoom.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Admin\NavigationAdmin.Designer.vb">
       <DependentUpon>NavigationAdmin.vb</DependentUpon>
     </Compile>
@@ -79,6 +91,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Helper.vb" />
+    <Compile Include="Client\ListKamar.Designer.vb">
+      <DependentUpon>ListKamar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Client\ListKamar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
@@ -108,8 +126,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Admin\ManagementRoom.resx">
+      <DependentUpon>ManagementRoom.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\ManagementTypeRoom.resx">
+      <DependentUpon>ManagementTypeRoom.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\NavigationAdmin.resx">
       <DependentUpon>NavigationAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\ListKamar.resx">
+      <DependentUpon>ListKamar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
@@ -140,8 +167,13 @@
     <None Include="Resources\Hotels.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Client\" />
     <Folder Include="Petugas\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-user-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VisualEditor_icon_image-none.svg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

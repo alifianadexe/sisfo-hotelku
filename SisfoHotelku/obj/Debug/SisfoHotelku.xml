@@ -27,5 +27,15 @@ SisfoHotelku
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:SisfoHotelku.My.Resources.Resources.icon_user_default">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SisfoHotelku.My.Resources.Resources.VisualEditor_icon_image_none_svg">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 </members>
 </doc>

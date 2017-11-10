@@ -26,10 +26,10 @@ Partial Class MainForm
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -78,16 +78,6 @@ Partial Class MainForm
         Me.Label4.TabIndex = 3
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.SisfoHotelku.My.Resources.Resources.Hotels
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 101)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(636, 283)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 4
-        Me.PictureBox1.TabStop = False
-        '
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.Goldenrod
@@ -123,6 +113,16 @@ Partial Class MainForm
         Me.Button3.TabIndex = 8
         Me.Button3.Text = "Info Hotel"
         Me.Button3.UseVisualStyleBackColor = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.SisfoHotelku.My.Resources.Resources.Hotels
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 101)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(636, 283)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 4
+        Me.PictureBox1.TabStop = False
         '
         'MainForm
         '

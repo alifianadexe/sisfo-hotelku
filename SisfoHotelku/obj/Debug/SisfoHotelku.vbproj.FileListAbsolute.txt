@@ -11,3 +11,6 @@ C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\SisfoHotelku\bin\D
 C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\SisfoHotelku\bin\Debug\SisfoHotelku.xml
 C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\SisfoHotelku\obj\Debug\SisfoHotelku.exe
 C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\SisfoHotelku\obj\Debug\SisfoHotelku.pdb
+C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\SisfoHotelku\obj\Debug\SisfoHotelku.ManagementRoom.resources
+C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\SisfoHotelku\obj\Debug\SisfoHotelku.ManagementTypeRoom.resources
+C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\SisfoHotelku\obj\Debug\SisfoHotelku.ListKamar.resources

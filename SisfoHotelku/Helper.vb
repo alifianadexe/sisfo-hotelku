@@ -67,6 +67,7 @@
                 End If
 
                 rd.Close()
+
             Case "id_invoice"
                 Dim sql As String = "SELECT * FROM tbl_invoice ORDER BY " + what + " DESC"
                 Dim cmnd As New SqlClient.SqlCommand(sql, conn)
@@ -176,6 +177,25 @@
                         id = "PTG0" + id
                     ElseIf Len(id) = 3 Then
                         id = "PTG" + id
+                    End If
+                End If
+                rd.Close()
+            Case "id_type_room"
+                Dim sql As String = "SELECT * FROM tbl_type_room ORDER BY " + what + " DESC"
+                Dim cmnd As New SqlClient.SqlCommand(sql, conn)
+                rd = cmnd.ExecuteReader
+                rd.Read()
+
+                If Not rd.HasRows Then
+                    id = "TPR001"
+                Else
+                    id = Val(Mid(rd.Item(0), 4, 3)) + 1
+                    If Len(id) = 1 Then
+                        id = "TPR00" + id
+                    ElseIf Len(id) = 2 Then
+                        id = "TPR0" + id
+                    ElseIf Len(id) = 3 Then
+                        id = "TPR" + id
                     End If
                 End If
                 rd.Close()

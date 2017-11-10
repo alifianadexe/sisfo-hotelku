@@ -7,4 +7,9 @@
         Dim log As New Login
         log.Show()
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim lk As New ListKamar
+        lk.Show()
+    End Sub
 End Class

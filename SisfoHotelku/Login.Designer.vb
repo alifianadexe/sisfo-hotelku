@@ -23,11 +23,11 @@ Partial Class Login
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.txt_username = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txt_password = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txt_username = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -45,34 +45,6 @@ Partial Class Login
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Login"
         '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.LimeGreen
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.Control
-        Me.Button1.Location = New System.Drawing.Point(303, 29)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(140, 46)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Login"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'txt_username
-        '
-        Me.txt_username.Location = New System.Drawing.Point(67, 29)
-        Me.txt_username.Name = "txt_username"
-        Me.txt_username.Size = New System.Drawing.Size(230, 20)
-        Me.txt_username.TabIndex = 2
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 32)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(55, 13)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Username"
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -86,8 +58,37 @@ Partial Class Login
         '
         Me.txt_password.Location = New System.Drawing.Point(67, 55)
         Me.txt_password.Name = "txt_password"
+        Me.txt_password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txt_password.Size = New System.Drawing.Size(230, 20)
         Me.txt_password.TabIndex = 4
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(6, 32)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(55, 13)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Username"
+        '
+        'txt_username
+        '
+        Me.txt_username.Location = New System.Drawing.Point(67, 29)
+        Me.txt_username.Name = "txt_username"
+        Me.txt_username.Size = New System.Drawing.Size(230, 20)
+        Me.txt_username.TabIndex = 2
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.LimeGreen
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.Control
+        Me.Button1.Location = New System.Drawing.Point(303, 29)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(140, 46)
+        Me.Button1.TabIndex = 1
+        Me.Button1.Text = "Login"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Login
         '
