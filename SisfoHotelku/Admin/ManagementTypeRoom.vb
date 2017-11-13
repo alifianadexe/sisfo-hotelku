@@ -1,7 +1,7 @@
 ﻿Public Class ManagementTypeRoom
     Dim id As String = ""
     Dim conn As New SqlClient.SqlConnection()
-
+    Dim rd As SqlClient.SqlDataReader
 
     Private Sub ManagementTypeRoom_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conn.ConnectionString = generateConnString()
@@ -53,15 +53,15 @@
     End Sub
 
     Private Sub btn_edit_Click(sender As Object, e As EventArgs) Handles btn_edit.Click
-        is_clear()
+
         Me.btn_insert.Text = "Update"
         is_enabled(True)
     End Sub
 
     Private Sub btn_insert_Click(sender As Object, e As EventArgs) Handles btn_insert.Click
-        '        Try
+        Try
 
-        Dim ms As New IO.MemoryStream
+            Dim ms As New IO.MemoryStream
             PictureBox1.Image.Save(ms, Imaging.ImageFormat.Png)
             Dim arr_image() As Byte = ms.GetBuffer
 
@@ -83,7 +83,8 @@
                 End If
             ElseIf btn_insert.Text = "Update" Then
                 If cekEmptyTextbox(Me.txt_desc, Me.txt_id, Me.txt_nama) Then
-                    Dim sql As String = "UPDATE tbl_type_room SET id_type_room = @v1, nama = @v2, picture = @v3, deskripsi = @v4"
+                    Dim sql As String = "UPDATE tbl_type_room SET nama = @v2, picture = @v3, deskripsi = @v4 WHERE id_type_room = @v1"
+
                     Using cmnd As New SqlClient.SqlCommand(sql, conn)
                         cmnd.Parameters.AddWithValue("@v1", Me.txt_id.Text)
                         cmnd.Parameters.AddWithValue("@v2", Me.txt_nama.Text)
@@ -97,9 +98,9 @@
                     End Using
                 End If
             End If
-        'Catch ex As Exception
-        'MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand)
-        'End Try
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand)
+        End Try
 
         Me.btn_insert.Text = "Insert"
 
@@ -115,4 +116,28 @@
         is_enabled(True)
     End Sub
 
+    Private Sub txt_tipe_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txt_tipe.SelectedIndexChanged
+        Try
+
+            Dim sql As String = "SELECT * FROM tbl_type_room WHERE id_type_room = '" + Me.txt_tipe.SelectedValue + "'"
+            Dim cmnd As New SqlClient.SqlCommand(sql, conn)
+            rd = cmnd.ExecuteReader
+            rd.Read()
+
+            If rd.HasRows Then
+
+                Me.txt_id.Text = rd.Item("id_type_room")
+                Me.txt_nama.Text = rd.Item("nama")
+                Me.txt_desc.Text = rd.Item("deskripsi")
+
+                Dim arr_image() As Byte = rd.Item("picture")
+                Dim ms As New IO.MemoryStream(arr_image)
+                PictureBox1.Image = Image.FromStream(ms)
+
+            End If
+            rd.Close()
+        Catch ex As Exception
+
+        End Try
+    End Sub
 End Class

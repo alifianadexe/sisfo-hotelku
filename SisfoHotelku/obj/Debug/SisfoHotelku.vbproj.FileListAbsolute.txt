@@ -14,3 +14,6 @@ C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\SisfoHotelku\obj\D
 C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\SisfoHotelku\obj\Debug\SisfoHotelku.ManagementRoom.resources
 C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\SisfoHotelku\obj\Debug\SisfoHotelku.ManagementTypeRoom.resources
 C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\SisfoHotelku\obj\Debug\SisfoHotelku.ListKamar.resources
+C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\SisfoHotelku\obj\Debug\SisfoHotelku.ReservationForm.resources
+C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\SisfoHotelku\obj\Debug\SisfoHotelku.ManagementReservation.resources
+C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\SisfoHotelku\obj\Debug\SisfoHotelku.ManagementClient.resources

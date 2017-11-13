@@ -33,4 +33,14 @@
         mr.Show()
 
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim rs As New ManagementReservation
+        rs.Show()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim mnc As New ManagementClient
+        mnc.Show()
+    End Sub
 End Class

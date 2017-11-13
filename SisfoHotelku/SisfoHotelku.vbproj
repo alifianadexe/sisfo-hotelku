@@ -72,6 +72,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\ManagementClient.Designer.vb">
+      <DependentUpon>ManagementClient.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManagementClient.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\ManagementReservation.Designer.vb">
+      <DependentUpon>ManagementReservation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManagementReservation.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Admin\ManagementRoom.Designer.vb">
       <DependentUpon>ManagementRoom.vb</DependentUpon>
     </Compile>
@@ -88,6 +100,12 @@
       <DependentUpon>NavigationAdmin.vb</DependentUpon>
     </Compile>
     <Compile Include="Admin\NavigationAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client\ReservationForm.Designer.vb">
+      <DependentUpon>ReservationForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Client\ReservationForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Helper.vb" />
@@ -126,6 +144,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Admin\ManagementClient.resx">
+      <DependentUpon>ManagementClient.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\ManagementReservation.resx">
+      <DependentUpon>ManagementReservation.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\ManagementRoom.resx">
       <DependentUpon>ManagementRoom.vb</DependentUpon>
     </EmbeddedResource>
@@ -137,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Client\ListKamar.resx">
       <DependentUpon>ListKamar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\ReservationForm.resx">
+      <DependentUpon>ReservationForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>

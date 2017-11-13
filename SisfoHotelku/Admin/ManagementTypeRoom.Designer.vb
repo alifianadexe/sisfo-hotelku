@@ -32,15 +32,15 @@ Partial Class ManagementTypeRoom
         Me.btn_edit = New System.Windows.Forms.Button()
         Me.txt_nama = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.txt_id = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txt_tipe = New System.Windows.Forms.ComboBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -145,6 +145,16 @@ Partial Class ManagementTypeRoom
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Nama Tipe"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.SisfoHotelku.My.Resources.Resources.VisualEditor_icon_image_none_svg
+        Me.PictureBox1.Location = New System.Drawing.Point(435, 19)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(325, 150)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 3
+        Me.PictureBox1.TabStop = False
+        '
         'txt_id
         '
         Me.txt_id.Enabled = False
@@ -184,16 +194,6 @@ Partial Class ManagementTypeRoom
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.SisfoHotelku.My.Resources.Resources.VisualEditor_icon_image_none_svg
-        Me.PictureBox1.Location = New System.Drawing.Point(435, 19)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(325, 150)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 3
-        Me.PictureBox1.TabStop = False
-        '
         'ManagementTypeRoom
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -205,8 +205,8 @@ Partial Class ManagementTypeRoom
         Me.Text = "ManagementTypeRoom"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub

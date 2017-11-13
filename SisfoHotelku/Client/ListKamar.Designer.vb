@@ -143,12 +143,15 @@ Partial Class ListKamar
         '
         'Button1
         '
+        Me.Button1.BackColor = System.Drawing.Color.BlueViolet
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.Control
         Me.Button1.Location = New System.Drawing.Point(357, 532)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(143, 54)
         Me.Button1.TabIndex = 8
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.Text = "Reservasi"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'ListKamar
         '

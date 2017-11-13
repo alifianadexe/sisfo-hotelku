@@ -28,29 +28,34 @@ Partial Class ReservationForm
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.txt_tanggal = New System.Windows.Forms.DateTimePicker()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.txt_email = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txt_no_hp = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.txt_tanggal = New System.Windows.Forms.DateTimePicker()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.txt_jenis_kamar = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.txt_price = New System.Windows.Forms.RadioButton()
-        Me.txt_price_2 = New System.Windows.Forms.RadioButton()
-        Me.txt_jumlah_kamar = New System.Windows.Forms.NumericUpDown()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.txt_jumlah_kamar = New System.Windows.Forms.NumericUpDown()
+        Me.txt_price_2 = New System.Windows.Forms.RadioButton()
+        Me.txt_price = New System.Windows.Forms.RadioButton()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txt_jenis_kamar = New System.Windows.Forms.TextBox()
         Me.btn_pesan = New System.Windows.Forms.Button()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.txt_hari = New System.Windows.Forms.NumericUpDown()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.txt_jumlah_kamar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txt_hari, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txt_id
         '
+        Me.txt_id.Enabled = False
         Me.txt_id.Location = New System.Drawing.Point(86, 19)
         Me.txt_id.Name = "txt_id"
         Me.txt_id.Size = New System.Drawing.Size(98, 20)
@@ -78,7 +83,7 @@ Partial Class ReservationForm
         Me.Label1.ForeColor = System.Drawing.SystemColors.Control
         Me.Label1.Location = New System.Drawing.Point(-8, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(495, 47)
+        Me.Label1.Size = New System.Drawing.Size(415, 47)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Reservation Form"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -95,7 +100,7 @@ Partial Class ReservationForm
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.TextBox5)
+        Me.GroupBox1.Controls.Add(Me.txt_email)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.txt_no_hp)
         Me.GroupBox1.Controls.Add(Me.txt_tanggal)
@@ -108,44 +113,26 @@ Partial Class ReservationForm
         Me.GroupBox1.Controls.Add(Me.txt_alamat)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 70)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(455, 209)
+        Me.GroupBox1.Size = New System.Drawing.Size(374, 209)
         Me.GroupBox1.TabIndex = 8
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Data Diri"
         '
-        'Label2
+        'Label7
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(6, 48)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(38, 13)
-        Me.Label2.TabIndex = 8
-        Me.Label2.Text = "Nama "
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(6, 178)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(32, 13)
+        Me.Label7.TabIndex = 15
+        Me.Label7.Text = "Email"
         '
-        'Label4
+        'txt_email
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(6, 74)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(39, 13)
-        Me.Label4.TabIndex = 9
-        Me.Label4.Text = "Alamat"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(6, 127)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(72, 13)
-        Me.Label5.TabIndex = 10
-        Me.Label5.Text = "Tanggal Lahir"
-        '
-        'txt_tanggal
-        '
-        Me.txt_tanggal.Location = New System.Drawing.Point(86, 123)
-        Me.txt_tanggal.Name = "txt_tanggal"
-        Me.txt_tanggal.Size = New System.Drawing.Size(200, 20)
-        Me.txt_tanggal.TabIndex = 11
+        Me.txt_email.Location = New System.Drawing.Point(86, 175)
+        Me.txt_email.Name = "txt_email"
+        Me.txt_email.Size = New System.Drawing.Size(237, 20)
+        Me.txt_email.TabIndex = 14
         '
         'Label6
         '
@@ -163,24 +150,45 @@ Partial Class ReservationForm
         Me.txt_no_hp.Size = New System.Drawing.Size(200, 20)
         Me.txt_no_hp.TabIndex = 12
         '
-        'Label7
+        'txt_tanggal
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(6, 178)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(32, 13)
-        Me.Label7.TabIndex = 15
-        Me.Label7.Text = "Email"
+        Me.txt_tanggal.Location = New System.Drawing.Point(86, 123)
+        Me.txt_tanggal.Name = "txt_tanggal"
+        Me.txt_tanggal.Size = New System.Drawing.Size(200, 20)
+        Me.txt_tanggal.TabIndex = 11
         '
-        'TextBox5
+        'Label5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(86, 175)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(237, 20)
-        Me.TextBox5.TabIndex = 14
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(6, 127)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(72, 13)
+        Me.Label5.TabIndex = 10
+        Me.Label5.Text = "Tanggal Lahir"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(6, 74)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(39, 13)
+        Me.Label4.TabIndex = 9
+        Me.Label4.Text = "Alamat"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(6, 48)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(38, 13)
+        Me.Label2.TabIndex = 8
+        Me.Label2.Text = "Nama "
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.Label11)
+        Me.GroupBox2.Controls.Add(Me.Label10)
+        Me.GroupBox2.Controls.Add(Me.txt_hari)
         Me.GroupBox2.Controls.Add(Me.Label9)
         Me.GroupBox2.Controls.Add(Me.txt_jumlah_kamar)
         Me.GroupBox2.Controls.Add(Me.txt_price_2)
@@ -189,55 +197,10 @@ Partial Class ReservationForm
         Me.GroupBox2.Controls.Add(Me.txt_jenis_kamar)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 285)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(455, 105)
+        Me.GroupBox2.Size = New System.Drawing.Size(383, 119)
         Me.GroupBox2.TabIndex = 9
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Data Kamar"
-        '
-        'txt_jenis_kamar
-        '
-        Me.txt_jenis_kamar.Location = New System.Drawing.Point(84, 19)
-        Me.txt_jenis_kamar.Name = "txt_jenis_kamar"
-        Me.txt_jenis_kamar.Size = New System.Drawing.Size(237, 20)
-        Me.txt_jenis_kamar.TabIndex = 0
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(5, 22)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(64, 13)
-        Me.Label8.TabIndex = 16
-        Me.Label8.Text = "Jenis Kamar"
-        '
-        'txt_price
-        '
-        Me.txt_price.AutoSize = True
-        Me.txt_price.Location = New System.Drawing.Point(84, 71)
-        Me.txt_price.Name = "txt_price"
-        Me.txt_price.Size = New System.Drawing.Size(68, 17)
-        Me.txt_price.TabIndex = 17
-        Me.txt_price.TabStop = True
-        Me.txt_price.Text = "Standard"
-        Me.txt_price.UseVisualStyleBackColor = True
-        '
-        'txt_price_2
-        '
-        Me.txt_price_2.AutoSize = True
-        Me.txt_price_2.Location = New System.Drawing.Point(158, 71)
-        Me.txt_price_2.Name = "txt_price_2"
-        Me.txt_price_2.Size = New System.Drawing.Size(65, 17)
-        Me.txt_price_2.TabIndex = 18
-        Me.txt_price_2.TabStop = True
-        Me.txt_price_2.Text = "Premium"
-        Me.txt_price_2.UseVisualStyleBackColor = True
-        '
-        'txt_jumlah_kamar
-        '
-        Me.txt_jumlah_kamar.Location = New System.Drawing.Point(86, 45)
-        Me.txt_jumlah_kamar.Name = "txt_jumlah_kamar"
-        Me.txt_jumlah_kamar.Size = New System.Drawing.Size(100, 20)
-        Me.txt_jumlah_kamar.TabIndex = 19
         '
         'Label9
         '
@@ -248,20 +211,95 @@ Partial Class ReservationForm
         Me.Label9.TabIndex = 20
         Me.Label9.Text = "Jumlah Kamar"
         '
+        'txt_jumlah_kamar
+        '
+        Me.txt_jumlah_kamar.Location = New System.Drawing.Point(86, 45)
+        Me.txt_jumlah_kamar.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.txt_jumlah_kamar.Name = "txt_jumlah_kamar"
+        Me.txt_jumlah_kamar.Size = New System.Drawing.Size(64, 20)
+        Me.txt_jumlah_kamar.TabIndex = 19
+        Me.txt_jumlah_kamar.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        '
+        'txt_price_2
+        '
+        Me.txt_price_2.AutoSize = True
+        Me.txt_price_2.Location = New System.Drawing.Point(156, 96)
+        Me.txt_price_2.Name = "txt_price_2"
+        Me.txt_price_2.Size = New System.Drawing.Size(65, 17)
+        Me.txt_price_2.TabIndex = 18
+        Me.txt_price_2.TabStop = True
+        Me.txt_price_2.Text = "Premium"
+        Me.txt_price_2.UseVisualStyleBackColor = True
+        '
+        'txt_price
+        '
+        Me.txt_price.AutoSize = True
+        Me.txt_price.Location = New System.Drawing.Point(82, 96)
+        Me.txt_price.Name = "txt_price"
+        Me.txt_price.Size = New System.Drawing.Size(68, 17)
+        Me.txt_price.TabIndex = 17
+        Me.txt_price.TabStop = True
+        Me.txt_price.Text = "Standard"
+        Me.txt_price.UseVisualStyleBackColor = True
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(5, 22)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(64, 13)
+        Me.Label8.TabIndex = 16
+        Me.Label8.Text = "Jenis Kamar"
+        '
+        'txt_jenis_kamar
+        '
+        Me.txt_jenis_kamar.Enabled = False
+        Me.txt_jenis_kamar.Location = New System.Drawing.Point(84, 19)
+        Me.txt_jenis_kamar.Name = "txt_jenis_kamar"
+        Me.txt_jenis_kamar.Size = New System.Drawing.Size(237, 20)
+        Me.txt_jenis_kamar.TabIndex = 0
+        '
         'btn_pesan
         '
-        Me.btn_pesan.Location = New System.Drawing.Point(154, 396)
+        Me.btn_pesan.Location = New System.Drawing.Point(117, 410)
         Me.btn_pesan.Name = "btn_pesan"
         Me.btn_pesan.Size = New System.Drawing.Size(144, 40)
         Me.btn_pesan.TabIndex = 10
         Me.btn_pesan.Text = "Pesan"
         Me.btn_pesan.UseVisualStyleBackColor = True
         '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(6, 72)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(62, 13)
+        Me.Label10.TabIndex = 22
+        Me.Label10.Text = "Jumlah Hari"
+        '
+        'txt_hari
+        '
+        Me.txt_hari.Location = New System.Drawing.Point(86, 70)
+        Me.txt_hari.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.txt_hari.Name = "txt_hari"
+        Me.txt_hari.Size = New System.Drawing.Size(64, 20)
+        Me.txt_hari.TabIndex = 21
+        Me.txt_hari.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(153, 72)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(26, 13)
+        Me.Label11.TabIndex = 23
+        Me.Label11.Text = "Hari"
+        '
         'ReservationForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(479, 448)
+        Me.ClientSize = New System.Drawing.Size(399, 462)
         Me.Controls.Add(Me.btn_pesan)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -273,6 +311,7 @@ Partial Class ReservationForm
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.txt_jumlah_kamar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txt_hari, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -289,7 +328,7 @@ Partial Class ReservationForm
     Friend WithEvents Label6 As Label
     Friend WithEvents txt_no_hp As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents txt_email As TextBox
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents Label8 As Label
     Friend WithEvents txt_jenis_kamar As TextBox
@@ -298,4 +337,7 @@ Partial Class ReservationForm
     Friend WithEvents txt_jumlah_kamar As NumericUpDown
     Friend WithEvents Label9 As Label
     Friend WithEvents btn_pesan As Button
+    Friend WithEvents Label10 As Label
+    Friend WithEvents txt_hari As NumericUpDown
+    Friend WithEvents Label11 As Label
 End Class

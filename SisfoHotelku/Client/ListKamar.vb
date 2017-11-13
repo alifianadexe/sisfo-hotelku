@@ -61,4 +61,11 @@
         refreshData()
     End Sub
 
+    Private Sub reserv_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim rs As New ReservationForm
+        rs.txt_jenis_kamar.Text = Me.txt_tipe.Text
+        rs.txt_jenis_kamar.Tag = Me.txt_tipe.SelectedValue.ToString
+        rs.txt_jumlah_kamar.Maximum = data_grid.RowCount
+        rs.Show()
+    End Sub
 End Class
