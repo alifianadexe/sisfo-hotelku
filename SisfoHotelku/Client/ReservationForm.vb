@@ -20,8 +20,8 @@
     End Sub
 
     Private Sub btn_pesan_Click(sender As Object, e As EventArgs) Handles btn_pesan.Click
-        'Try
-        If cekEmptyTextbox(Me.txt_alamat, Me.txt_id, Me.txt_jenis_kamar, Me.txt_jumlah_kamar, Me.txt_nama, Me.txt_no_hp) Then
+        Try
+            If cekEmptyTextbox(Me.txt_alamat, Me.txt_id, Me.txt_jenis_kamar, Me.txt_jumlah_kamar, Me.txt_nama, Me.txt_no_hp) Then
                 Dim sql As String = "INSERT INTO tbl_client (id_client, nama_client , alamat, tanggal_lahir, no_hp, email) VALUES (@v1,@v2,@v3,@v4,@v5,@v6)"
                 Using cmnd As New SqlClient.SqlCommand(sql, conn)
                     cmnd.Parameters.AddWithValue("@v1", Me.txt_id.Text)
@@ -40,9 +40,9 @@
 
                 End Using
             End If
-        ' Catch ex As Exception
-        'MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        ' End Try
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 
     Private Sub ins_reservation()
@@ -56,7 +56,7 @@
 
 
             up_room_res(id_reservation)
-
+            insert_invoice(id_reservation)
 
             cmnd.ExecuteNonQuery()
         End Using
@@ -65,7 +65,7 @@
     Private Sub up_room_res(ByVal id As String)
 
 
-        For i As Integer = 0 To Me.txt_jumlah_kamar.Value
+        For i As Integer = 1 To Me.txt_jumlah_kamar.Value
 
             Dim sql_select As String = "SELECT * FROM tbl_room WHERE is_free = 1 AND id_type_room = '" + Me.txt_jenis_kamar.Tag + "'"
 
@@ -107,7 +107,7 @@
 
         Dim status As String = ""
 
-        Dim sql As String = "INSERT INTO tbl_invoice (id_invoice , id_client, id_reservation, invoice_status, invoice_date, invoice_day, invoice_desc, total_pembayaran) VALUES (@v1,@v2,@v3,@v4,@v5,@v6,@v7,@v8)"
+        Dim sql As String = "INSERT INTO tbl_invoice (id_invoice , id_client, id_reservation, invoice_status, invoice_date, invoice_day, invoice_desc, total_pembayaran, is_accept) VALUES (@v1,@v2,@v3,@v4,@v5,@v6,@v7,@v8,@v9)"
         Using cmnd As New SqlClient.SqlCommand(sql, conn)
             cmnd.Parameters.AddWithValue("@v1", id_invoice)
             cmnd.Parameters.AddWithValue("@v2", Me.txt_id.Text)
@@ -124,6 +124,7 @@
             cmnd.Parameters.AddWithValue("@v6", Me.txt_hari.Value)
             cmnd.Parameters.AddWithValue("@v7", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
             cmnd.Parameters.AddWithValue("@v8", total_harga)
+            cmnd.Parameters.AddWithValue("@v9", 0)
 
             cmnd.ExecuteNonQuery()
         End Using
@@ -132,6 +133,7 @@
 
 
     Private Sub insert_bill(ByVal id_room As String)
+
         Dim sql As String = "INSERT INTO tbl_tagihan (id_tagihan, id_invoice, biaya, id_room) VALUES (@v1,@v2,@v3,@v4)"
         Using cmnd As New SqlClient.SqlCommand(sql, conn)
             cmnd.Parameters.AddWithValue("@v1", generateID("id_tagihan", conn))

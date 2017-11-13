@@ -43,4 +43,10 @@
         Dim mnc As New ManagementClient
         mnc.Show()
     End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        Dim mi As New ManagementInvoice
+        mi.Show()
+
+    End Sub
 End Class

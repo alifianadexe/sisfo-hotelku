@@ -24,6 +24,7 @@ Partial Class NavigationAdmin
     Private Sub InitializeComponent()
         Me.FRE = New System.Windows.Forms.Button()
         Me.tbl = New System.Windows.Forms.GroupBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lbl_status = New System.Windows.Forms.Label()
         Me.lbl_date = New System.Windows.Forms.Label()
         Me.lbl_no_hp = New System.Windows.Forms.Label()
@@ -37,19 +38,18 @@ Partial Class NavigationAdmin
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Button8 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.tbl.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'FRE
@@ -82,6 +82,16 @@ Partial Class NavigationAdmin
         Me.tbl.TabIndex = 1
         Me.tbl.TabStop = False
         Me.tbl.Text = "Data Diri"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.SisfoHotelku.My.Resources.Resources.icon_user_default
+        Me.PictureBox1.Location = New System.Drawing.Point(86, 19)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(162, 179)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 12
+        Me.PictureBox1.TabStop = False
         '
         'lbl_status
         '
@@ -215,6 +225,33 @@ Partial Class NavigationAdmin
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Menu"
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(425, 145)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(201, 57)
+        Me.Button1.TabIndex = 8
+        Me.Button1.Text = "Management Bill"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(425, 82)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(201, 57)
+        Me.Button7.TabIndex = 7
+        Me.Button7.Text = "Management Invoice"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
+        'Button8
+        '
+        Me.Button8.Location = New System.Drawing.Point(425, 19)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(201, 57)
+        Me.Button8.TabIndex = 6
+        Me.Button8.Text = "Management Lokasi"
+        Me.Button8.UseVisualStyleBackColor = True
+        '
         'Button5
         '
         Me.Button5.Location = New System.Drawing.Point(218, 145)
@@ -272,43 +309,6 @@ Partial Class NavigationAdmin
         Me.Label1.Text = "Admin Navigation"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(425, 145)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(201, 57)
-        Me.Button1.TabIndex = 8
-        Me.Button1.Text = "Management Bill"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button7
-        '
-        Me.Button7.Location = New System.Drawing.Point(425, 82)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(201, 57)
-        Me.Button7.TabIndex = 7
-        Me.Button7.Text = "Management Invoice"
-        Me.Button7.UseVisualStyleBackColor = True
-        '
-        'Button8
-        '
-        Me.Button8.Location = New System.Drawing.Point(425, 19)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(201, 57)
-        Me.Button8.TabIndex = 6
-        Me.Button8.Text = "Management Lokasi"
-        Me.Button8.UseVisualStyleBackColor = True
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.SisfoHotelku.My.Resources.Resources.icon_user_default
-        Me.PictureBox1.Location = New System.Drawing.Point(86, 19)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(162, 179)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 12
-        Me.PictureBox1.TabStop = False
-        '
         'NavigationAdmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -320,8 +320,8 @@ Partial Class NavigationAdmin
         Me.Name = "NavigationAdmin"
         Me.tbl.ResumeLayout(False)
         Me.tbl.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub

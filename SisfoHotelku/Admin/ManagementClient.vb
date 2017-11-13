@@ -75,4 +75,91 @@
 
         rd.Close()
     End Sub
+
+    Private Sub btn_ad_Click(sender As Object, e As EventArgs) Handles btn_ad.Click
+        is_clear()
+        Me.txt_id.Text = generateID("id_client", conn)
+        is_enabled(True)
+    End Sub
+
+    Private Sub btn_ins_Click(sender As Object, e As EventArgs) Handles btn_ins.Click
+        Try
+            If cekEmptyTextbox(Me.txt_alamat, Me.txt_email, Me.txt_nama, Me.txt_no_hp) Then
+                If Me.btn_ins.Text = "Insert" Then
+                    Dim sql As String = "INSERT INTO tbl_client (id_client, nama_client , alamat, tanggal_lahir, no_hp, email) VALUES (@v1,@v2,@v3,@v4,@v5,@v6)"
+                    Using cmnd As New SqlClient.SqlCommand(sql, conn)
+                        cmnd.Parameters.AddWithValue("@v1", Me.txt_id.Text)
+                        cmnd.Parameters.AddWithValue("@v2", Me.txt_nama.Text)
+                        cmnd.Parameters.AddWithValue("@v3", Me.txt_alamat.Text)
+                        cmnd.Parameters.AddWithValue("@v4", Me.txt_tanggal_lahir.Value)
+                        cmnd.Parameters.AddWithValue("@v5", Me.txt_no_hp.Text)
+                        cmnd.Parameters.AddWithValue("@v6", Me.txt_email.Text)
+
+                        If MessageBox.Show("Apakah Anda memasukkan data?", "Pesan", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                            cmnd.ExecuteNonQuery()
+                            MessageBox.Show("Selamat, data berhasil dimasukkan ", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+                        End If
+
+                    End Using
+                ElseIf Me.btn_ins.Text = "Update" Then
+                    Dim sql As String = "UPDATE tbl_client SET nama_client = @v2, alamat = @v3, tanggal_lahir = @v4, no_hp = @v5, email = @v6 WHERE id_client = @v1"
+                    Using cmnd As New SqlClient.SqlCommand(sql, conn)
+                        cmnd.Parameters.AddWithValue("@v1", Me.txt_id.Text)
+                        cmnd.Parameters.AddWithValue("@v2", Me.txt_nama.Text)
+                        cmnd.Parameters.AddWithValue("@v3", Me.txt_alamat.Text)
+                        cmnd.Parameters.AddWithValue("@v4", Me.txt_tanggal_lahir.Value)
+                        cmnd.Parameters.AddWithValue("@v5", Me.txt_no_hp.Text)
+                        cmnd.Parameters.AddWithValue("@v6", Me.txt_email.Text)
+
+                        If MessageBox.Show("Update Data ini?", "Pesan", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                            cmnd.ExecuteNonQuery()
+                            MessageBox.Show("Selamat, data berhasil diupdate ", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+                        End If
+
+                    End Using
+                End If
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+        is_clear()
+        is_enabled(False)
+        Me.btn_ins.Text = "Insert"
+
+        refreshData()
+    End Sub
+
+    Private Sub btn_edit_Click(sender As Object, e As EventArgs) Handles btn_edit.Click
+        is_enabled(True)
+        Me.btn_ins.Text = "Insert"
+    End Sub
+
+    Private Sub btn_dele_Click(sender As Object, e As EventArgs) Handles btn_dele.Click
+        If Not Me.txt_id.Text = "" Then
+            Dim sql As String = "DELETE FROM tbl_client WHERE id_client = '" + Me.txt_id.Text + "'"
+            Dim cmnd As New SqlClient.SqlCommand(sql, conn)
+            If MessageBox.Show("Hapus data ini?", "Hapus", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                cmnd.ExecuteNonQuery()
+            End If
+        End If
+
+    End Sub
+
+    Private Sub is_clear()
+
+        Me.txt_alamat.Clear()
+        Me.txt_email.Clear()
+        Me.txt_nama.Clear()
+        Me.txt_no_hp.Clear()
+
+    End Sub
+
+    Private Sub is_enabled(ByVal bool As Boolean)
+
+        Me.txt_alamat.Enabled = bool
+        Me.txt_email.Enabled = bool
+        Me.txt_nama.Enabled = bool
+        Me.txt_no_hp.Enabled = bool
+
+    End Sub
 End Class

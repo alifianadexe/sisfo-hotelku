@@ -24,7 +24,7 @@
         If e.RowIndex >= 0 Then
             list_room.Clear()
             Dim id As String = data_grid.Rows(e.RowIndex).Cells(0).Value
-            Dim sql As String = "SELECT tbl_room.id_room as id_room , tbl_client.id_client, nama_client, alamat, tanggal_lahir, no_hp, email FROM (tbl_reservation INNER JOIN tbl_room ON tbl_reservation.id_reservation = tbl_room.id_reservation) INNER JOIN tbl_client ON tbl_client.id_client = tbl_reservation.id_client WHERE tbl_reservation.id_reservation = '" + id + "'"
+            Dim sql As String = "SELECT tbl_room.id_room as id_room , tbl_client.id_client, nama_client, alamat, tanggal_lahir, no_hp, email FROM (tbl_reservation INNER JOIN tbl_room ON tbl_reservation.id_reservation = tbl_room.id_reservation) INNER JOIN tbl_client ON tbl_client.id_client = tbl_reservation.id_client WHERE tbl_reservation.id_reservation = '" + id + "' AND tbl_room.is_free = 0"
             Dim cmnd As New SqlClient.SqlCommand(sql, conn)
             rd = cmnd.ExecuteReader
 

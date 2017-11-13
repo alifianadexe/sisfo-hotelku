@@ -78,6 +78,12 @@
     <Compile Include="Admin\ManagementClient.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Admin\ManagementInvoice.Designer.vb">
+      <DependentUpon>ManagementInvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManagementInvoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Admin\ManagementReservation.Designer.vb">
       <DependentUpon>ManagementReservation.vb</DependentUpon>
     </Compile>
@@ -146,6 +152,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Admin\ManagementClient.resx">
       <DependentUpon>ManagementClient.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\ManagementInvoice.resx">
+      <DependentUpon>ManagementInvoice.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\ManagementReservation.resx">
       <DependentUpon>ManagementReservation.vb</DependentUpon>
