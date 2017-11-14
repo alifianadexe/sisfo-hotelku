@@ -37,6 +37,9 @@ Partial Class ReservationForm
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.txt_hari = New System.Windows.Forms.NumericUpDown()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txt_jumlah_kamar = New System.Windows.Forms.NumericUpDown()
         Me.txt_price_2 = New System.Windows.Forms.RadioButton()
@@ -44,13 +47,11 @@ Partial Class ReservationForm
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txt_jenis_kamar = New System.Windows.Forms.TextBox()
         Me.btn_pesan = New System.Windows.Forms.Button()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.txt_hari = New System.Windows.Forms.NumericUpDown()
-        Me.Label11 = New System.Windows.Forms.Label()
+        Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.txt_jumlah_kamar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txt_hari, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txt_jumlah_kamar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txt_id
@@ -202,6 +203,33 @@ Partial Class ReservationForm
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Data Kamar"
         '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(153, 72)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(26, 13)
+        Me.Label11.TabIndex = 23
+        Me.Label11.Text = "Hari"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(6, 72)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(62, 13)
+        Me.Label10.TabIndex = 22
+        Me.Label10.Text = "Jumlah Hari"
+        '
+        'txt_hari
+        '
+        Me.txt_hari.Location = New System.Drawing.Point(86, 70)
+        Me.txt_hari.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.txt_hari.Name = "txt_hari"
+        Me.txt_hari.Size = New System.Drawing.Size(64, 20)
+        Me.txt_hari.TabIndex = 21
+        Me.txt_hari.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        '
         'Label9
         '
         Me.Label9.AutoSize = True
@@ -268,32 +296,9 @@ Partial Class ReservationForm
         Me.btn_pesan.Text = "Pesan"
         Me.btn_pesan.UseVisualStyleBackColor = True
         '
-        'Label10
+        'PrintDialog1
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(6, 72)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(62, 13)
-        Me.Label10.TabIndex = 22
-        Me.Label10.Text = "Jumlah Hari"
-        '
-        'txt_hari
-        '
-        Me.txt_hari.Location = New System.Drawing.Point(86, 70)
-        Me.txt_hari.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.txt_hari.Name = "txt_hari"
-        Me.txt_hari.Size = New System.Drawing.Size(64, 20)
-        Me.txt_hari.TabIndex = 21
-        Me.txt_hari.Value = New Decimal(New Integer() {1, 0, 0, 0})
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(153, 72)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(26, 13)
-        Me.Label11.TabIndex = 23
-        Me.Label11.Text = "Hari"
+        Me.PrintDialog1.UseEXDialog = True
         '
         'ReservationForm
         '
@@ -310,8 +315,8 @@ Partial Class ReservationForm
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        CType(Me.txt_jumlah_kamar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txt_hari, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txt_jumlah_kamar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -340,4 +345,5 @@ Partial Class ReservationForm
     Friend WithEvents Label10 As Label
     Friend WithEvents txt_hari As NumericUpDown
     Friend WithEvents Label11 As Label
+    Friend WithEvents PrintDialog1 As PrintDialog
 End Class

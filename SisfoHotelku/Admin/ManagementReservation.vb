@@ -12,7 +12,7 @@
     End Sub
 
     Private Sub refreshData()
-        Dim sql As String = "SELECT tbl_reservation.id_reservation, check_in, check_out FROM tbl_reservation "
+        Dim sql As String = "SELECT tbl_reservation.id_reservation, check_in, check_out FROM tbl_reservation  "
         Dim adapter As New SqlClient.SqlDataAdapter(sql, conn)
         Dim dt As New DataTable
         adapter.Fill(dt)

@@ -1,4 +1,5 @@
-﻿Public Class ReservationForm
+﻿Imports System.Drawing.Printing
+Public Class ReservationForm
 
     Dim conn As New SqlClient.SqlConnection
     Dim rd As SqlClient.SqlDataReader
@@ -35,6 +36,8 @@
                     If MessageBox.Show("Apakah Anda ingin memesan Kamar dengan Tipe Ini?", "Pesan", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
                         ins_reservation()
                         cmnd.ExecuteNonQuery()
+
+                        print_load()
                         MessageBox.Show("Selamat, Anda berhasil memesan kamar ini ", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
                     End If
 
@@ -101,6 +104,7 @@
 
             insert_bill(id_room)
         Next
+
     End Sub
 
     Private Sub insert_invoice(ByVal id_reservation As String)
@@ -144,5 +148,96 @@
             cmnd.ExecuteNonQuery()
 
         End Using
+    End Sub
+
+    Private Sub print_load()
+        Dim pd As New PrintDocument
+        AddHandler pd.PrintPage, AddressOf Me.print_page
+        pd.DefaultPageSettings.Landscape = True
+        PrintDialog1.Document = pd
+
+        If PrintDialog1.ShowDialog() = DialogResult.OK Then
+            pd.Print()
+        End If
+    End Sub
+
+    Private Sub print_page(ByVal sender As Object, ByVal ev As PrintPageEventArgs)
+        Dim gp As Graphics = ev.Graphics
+        Dim fn As New Font("Courier New", 12)
+
+        Dim fontHeight As Integer = Math.Round(fn.Height)
+        Dim offset As Integer = 40
+        Dim posx As Integer = 10
+        Dim posy As Integer = 10
+
+        gp.DrawString("                 INVOICE TAGIHAN BILL", New Font("Courier New", 20), New SolidBrush(Color.Gray), posx, posy)
+        offset += fontHeight + 20
+        gp.DrawString("                     ADEXE HOTEL", New Font("Courier New", 20), New SolidBrush(Color.Gray), posx, posy + offset)
+        offset += fontHeight + 20
+        gp.DrawString("--------------------------------------------------------", New Font("Courier New", 20), New SolidBrush(Color.Gray), posx, posy + offset)
+        offset += fontHeight + 20
+
+        Dim sql As String = "SELECT tbl_invoice.id_invoice as [id_invoice], tbl_invoice.id_reservation as [id_reservasi] , invoice_status, invoice_day, invoice_date, invoice_desc , total_pembayaran, nama_client FROM tbl_invoice INNER JOIN tbl_client ON tbl_invoice.id_client = tbl_client.id_clien WHERE tbl_invoice.id_invoice = '" + id_invoice + "'"
+        Dim cmnd As New SqlClient.SqlCommand(sql, conn)
+        rd = cmnd.ExecuteReader
+        rd.Read()
+        Dim total_pembayaran As String = ""
+
+
+        If rd.HasRows Then
+
+            Dim id_invoice As String = ("ID Invoice   : ".PadRight(20) + rd.Item("id_invoice")).ToString.PadRight(20)
+            Dim id_reservasi As String = ("ID Reservasi : ".PadRight(20) + rd.Item("id_reservasi")).ToString.PadRight(20)
+            Dim invoice_status As String = ("Status       : ".PadRight(20) + rd.Item("invoice_status")).ToString.PadRight(20)
+            Dim invoice_day As String = ("Day          : ".PadRight(20) + rd.Item("invoice_day").ToString).ToString.PadRight(10)
+            Dim invoice_date As String = ("Date         : ".PadRight(20) + rd.Item("invoice_date").ToString).ToString.PadRight(20)
+            'Dim invoice_desc As String = rd.Item("invoice_desc")
+            Dim nama As String = ("Nama Client  : ".PadRight(20) + rd.Item("nama_client")).ToString
+            total_pembayaran = ("TOTAL PEMBAYARAN................ " + "Rp." + Format(rd.Item("total_pembayaran"), "##,##0.00")).ToString.PadRight(25)
+
+            gp.DrawString(id_invoice.PadRight(60) + id_reservasi, fn, New SolidBrush(Color.Black), posx, posy + offset)
+            offset += fontHeight + 10
+            gp.DrawString(nama, fn, New SolidBrush(Color.Black), posx, posy + offset)
+            offset += fontHeight + 10
+            gp.DrawString(invoice_status, fn, New SolidBrush(Color.Black), posx, posy + offset)
+            offset += fontHeight + 10
+            gp.DrawString(invoice_day, fn, New SolidBrush(Color.Black), posx, posy + offset)
+            offset += fontHeight + 10
+            gp.DrawString(invoice_date, fn, New SolidBrush(Color.Black), posx, posy + offset)
+            offset += fontHeight + 30
+
+
+        End If
+
+        rd.Close()
+
+
+        Dim sql_bill As String = "SELECT * FROM tbl_tagihan WHERE id_invoice = '" + id_invoice + "'"
+        Dim cmnd_bill As New SqlClient.SqlCommand(sql_bill, conn)
+        rd = cmnd_bill.ExecuteReader
+
+        rd.Read()
+
+        If rd.HasRows Then
+
+        End If
+
+
+        gp.DrawString("--------------------------------------------------------", New Font("Courier New", 20), New SolidBrush(Color.Beige), posx, posy + offset)
+        offset += fontHeight + 20
+        gp.DrawString(total_pembayaran, New Font("Courier New", 20), New SolidBrush(Color.Red), posx, posy + offset)
+        offset += fontHeight + 10
+
+    End Sub
+
+    Private Sub generate_bill()
+
+        Dim sql As String = "SELECT * FROM tbl_tagihan WHERE id_invoice = '" + id_invoice + "'"
+        Dim cmnd As New SqlClient.SqlCommand(sql, conn)
+        rd = cmnd.ExecuteReader
+        rd.Read()
+
+
+
     End Sub
 End Class
