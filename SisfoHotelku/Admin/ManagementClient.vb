@@ -29,7 +29,7 @@
             data_grid.DataSource = dt
 
         Catch ex As Exception
-
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 

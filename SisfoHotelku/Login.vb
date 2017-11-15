@@ -21,6 +21,7 @@
                             Dim na As New NavigationAdmin
                             na.Tag = rd.Item("id_petugas")
                             na.Show()
+                            Me.Hide()
                         End If
                     Else
                         MessageBox.Show("Maaf password salah!", "Sorry", MessageBoxButtons.OK, MessageBoxIcon.Hand)
@@ -33,5 +34,9 @@
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Sorry", MessageBoxButtons.OK, MessageBoxIcon.Hand)
         End Try
+    End Sub
+
+    Private Sub Login_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        MainForm.Show()
     End Sub
 End Class

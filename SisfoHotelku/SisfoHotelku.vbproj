@@ -52,6 +52,7 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -72,6 +73,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\Laporan\Laporan.Designer.vb">
+      <DependentUpon>Laporan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Laporan\Laporan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Laporan\LaporanKeuangan.Designer.vb">
+      <DependentUpon>LaporanKeuangan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Laporan\LaporanKeuangan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Admin\ManagementClient.Designer.vb">
       <DependentUpon>ManagementClient.vb</DependentUpon>
     </Compile>
@@ -150,6 +163,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Admin\Laporan\Laporan.resx">
+      <DependentUpon>Laporan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Laporan\LaporanKeuangan.resx">
+      <DependentUpon>LaporanKeuangan.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\ManagementClient.resx">
       <DependentUpon>ManagementClient.vb</DependentUpon>
     </EmbeddedResource>

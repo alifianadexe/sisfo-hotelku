@@ -18,3 +18,5 @@ C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\SisfoHotelku\obj\D
 C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\SisfoHotelku\obj\Debug\SisfoHotelku.ManagementReservation.resources
 C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\SisfoHotelku\obj\Debug\SisfoHotelku.ManagementClient.resources
 C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\SisfoHotelku\obj\Debug\SisfoHotelku.ManagementInvoice.resources
+C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\SisfoHotelku\obj\Debug\SisfoHotelku.Laporan.resources
+C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\SisfoHotelku\obj\Debug\SisfoHotelku.LaporanKeuangan.resources

@@ -55,7 +55,6 @@
                 Me.lbl_desc.Text = rd.Item("invoice_desc")
                 Me.lbl_total.Text = "Rp." + Format(rd.Item("total_pembayaran"), "##,##0.00")
 
-
             End If
             rd.Close()
 

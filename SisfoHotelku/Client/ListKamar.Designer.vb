@@ -25,14 +25,14 @@ Partial Class ListKamar
         Me.data_grid = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lbl_nama = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.txt_tipe = New System.Windows.Forms.ComboBox()
-        Me.lbl_nama = New System.Windows.Forms.Label()
         Me.asd = New System.Windows.Forms.GroupBox()
         Me.lbl_desc = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.data_grid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -75,6 +75,18 @@ Partial Class ListKamar
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Info Kamar"
         '
+        'lbl_nama
+        '
+        Me.lbl_nama.BackColor = System.Drawing.Color.OliveDrab
+        Me.lbl_nama.Font = New System.Drawing.Font("Berlin Sans FB", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_nama.ForeColor = System.Drawing.SystemColors.Control
+        Me.lbl_nama.Location = New System.Drawing.Point(6, 19)
+        Me.lbl_nama.Name = "lbl_nama"
+        Me.lbl_nama.Size = New System.Drawing.Size(435, 31)
+        Me.lbl_nama.TabIndex = 3
+        Me.lbl_nama.Text = "Pilih Tipe Kamar"
+        Me.lbl_nama.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.txt_tipe)
@@ -92,18 +104,6 @@ Partial Class ListKamar
         Me.txt_tipe.Name = "txt_tipe"
         Me.txt_tipe.Size = New System.Drawing.Size(354, 21)
         Me.txt_tipe.TabIndex = 0
-        '
-        'lbl_nama
-        '
-        Me.lbl_nama.BackColor = System.Drawing.Color.OliveDrab
-        Me.lbl_nama.Font = New System.Drawing.Font("Berlin Sans FB", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_nama.ForeColor = System.Drawing.SystemColors.Control
-        Me.lbl_nama.Location = New System.Drawing.Point(6, 19)
-        Me.lbl_nama.Name = "lbl_nama"
-        Me.lbl_nama.Size = New System.Drawing.Size(435, 31)
-        Me.lbl_nama.TabIndex = 3
-        Me.lbl_nama.Text = "Pilih Tipe Kamar"
-        Me.lbl_nama.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'asd
         '
@@ -132,15 +132,6 @@ Partial Class ListKamar
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Daftar Kamar"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Location = New System.Drawing.Point(6, 58)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(435, 229)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 5
-        Me.PictureBox1.TabStop = False
-        '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.BlueViolet
@@ -152,6 +143,15 @@ Partial Class ListKamar
         Me.Button1.TabIndex = 8
         Me.Button1.Text = "Reservasi"
         Me.Button1.UseVisualStyleBackColor = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Location = New System.Drawing.Point(6, 58)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(435, 229)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 5
+        Me.PictureBox1.TabStop = False
         '
         'ListKamar
         '

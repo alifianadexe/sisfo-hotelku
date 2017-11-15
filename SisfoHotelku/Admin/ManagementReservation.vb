@@ -66,7 +66,7 @@
                         If rd.HasRows Then
                             id_room(i) = rd.Item("id_room")
                         End If
-                        i += 1
+
 
                     Next
                     rd.Close()

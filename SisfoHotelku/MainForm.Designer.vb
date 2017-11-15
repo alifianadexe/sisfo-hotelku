@@ -30,6 +30,7 @@ Partial Class MainForm
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -40,7 +41,7 @@ Partial Class MainForm
         Me.Label1.ForeColor = System.Drawing.SystemColors.Control
         Me.Label1.Location = New System.Drawing.Point(5, 16)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(605, 61)
+        Me.Label1.Size = New System.Drawing.Size(643, 61)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "ADEXE HOTEL"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -61,7 +62,7 @@ Partial Class MainForm
         Me.Label3.BackColor = System.Drawing.Color.Wheat
         Me.Label3.Font = New System.Drawing.Font("Forte", 26.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label3.Location = New System.Drawing.Point(751, 79)
+        Me.Label3.Location = New System.Drawing.Point(672, 77)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(516, 37)
         Me.Label3.TabIndex = 2
@@ -72,9 +73,9 @@ Partial Class MainForm
         Me.Label4.BackColor = System.Drawing.Color.Wheat
         Me.Label4.Font = New System.Drawing.Font("Forte", 26.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label4.Location = New System.Drawing.Point(661, 130)
+        Me.Label4.Location = New System.Drawing.Point(743, 130)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(516, 37)
+        Me.Label4.Size = New System.Drawing.Size(434, 37)
         Me.Label4.TabIndex = 3
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -124,11 +125,23 @@ Partial Class MainForm
         Me.PictureBox1.TabIndex = 4
         Me.PictureBox1.TabStop = False
         '
+        'Label5
+        '
+        Me.Label5.BackColor = System.Drawing.Color.Wheat
+        Me.Label5.Font = New System.Drawing.Font("Forte", 26.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label5.Location = New System.Drawing.Point(712, 28)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(105, 37)
+        Me.Label5.TabIndex = 9
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(890, 473)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Button2)
@@ -152,4 +165,5 @@ Partial Class MainForm
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents Button3 As Button
+    Friend WithEvents Label5 As Label
 End Class

@@ -24,7 +24,6 @@ Partial Class NavigationAdmin
     Private Sub InitializeComponent()
         Me.FRE = New System.Windows.Forms.Button()
         Me.tbl = New System.Windows.Forms.GroupBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lbl_status = New System.Windows.Forms.Label()
         Me.lbl_date = New System.Windows.Forms.Label()
         Me.lbl_no_hp = New System.Windows.Forms.Label()
@@ -47,9 +46,10 @@ Partial Class NavigationAdmin
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.tbl.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'FRE
@@ -82,16 +82,6 @@ Partial Class NavigationAdmin
         Me.tbl.TabIndex = 1
         Me.tbl.TabStop = False
         Me.tbl.Text = "Data Diri"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.SisfoHotelku.My.Resources.Resources.icon_user_default
-        Me.PictureBox1.Location = New System.Drawing.Point(86, 19)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(162, 179)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 12
-        Me.PictureBox1.TabStop = False
         '
         'lbl_status
         '
@@ -309,6 +299,16 @@ Partial Class NavigationAdmin
         Me.Label1.Text = "Admin Navigation"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.SisfoHotelku.My.Resources.Resources.icon_user_default
+        Me.PictureBox1.Location = New System.Drawing.Point(86, 19)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(162, 179)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 12
+        Me.PictureBox1.TabStop = False
+        '
         'NavigationAdmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -320,8 +320,8 @@ Partial Class NavigationAdmin
         Me.Name = "NavigationAdmin"
         Me.tbl.ResumeLayout(False)
         Me.tbl.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

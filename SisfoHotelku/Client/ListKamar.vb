@@ -67,5 +67,10 @@
         rs.txt_jenis_kamar.Tag = Me.txt_tipe.SelectedValue.ToString
         rs.txt_jumlah_kamar.Maximum = data_grid.RowCount
         rs.Show()
+
+    End Sub
+
+    Private Sub ListKamar_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        MainForm.Show()
     End Sub
 End Class

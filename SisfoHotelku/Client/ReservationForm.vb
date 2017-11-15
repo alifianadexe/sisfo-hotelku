@@ -250,5 +250,7 @@ Public Class ReservationForm
 
     End Sub
 
+    Private Sub ReservationForm_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
 
+    End Sub
 End Class
