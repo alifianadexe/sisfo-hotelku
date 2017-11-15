@@ -49,14 +49,14 @@ Public Class ReservationForm
     End Sub
 
     Private Sub ins_reservation()
-        Dim sql As String = "INSERT INTO tbl_reservation (id_reservation,id_client,check_in,check_out) VALUES (@v1,@v2,@v3,@v4)"
+        Dim sql As String = "INSERT INTO tbl_reservation (id_reservation,id_client,check_in,check_out,is_check_out) VALUES (@v1,@v2,@v3,@v4,@v5)"
         Using cmnd As New SqlClient.SqlCommand(sql, conn)
 
             cmnd.Parameters.AddWithValue("@v1", id_reservation)
             cmnd.Parameters.AddWithValue("@v2", Me.txt_id.Text)
             cmnd.Parameters.AddWithValue("@v3", Date.Now)
             cmnd.Parameters.AddWithValue("@v4", Date.Parse(DateTime.Now.AddDays(Me.txt_hari.Value)))
-
+            cmnd.Parameters.AddWithValue("@v5", 0)
 
             up_room_res(id_reservation)
             insert_invoice(id_reservation)
@@ -87,7 +87,6 @@ Public Class ReservationForm
                     harga = rd.Item("room_price_premium")
                 End If
                 total_harga += harga
-
             End If
 
             rd.Close()
@@ -127,6 +126,9 @@ Public Class ReservationForm
             cmnd.Parameters.AddWithValue("@v5", Date.Now)
             cmnd.Parameters.AddWithValue("@v6", Me.txt_hari.Value)
             cmnd.Parameters.AddWithValue("@v7", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+
+            total_harga = total_harga * Me.txt_hari.Value
+
             cmnd.Parameters.AddWithValue("@v8", total_harga)
             cmnd.Parameters.AddWithValue("@v9", 0)
 
@@ -177,7 +179,7 @@ Public Class ReservationForm
         gp.DrawString("--------------------------------------------------------", New Font("Courier New", 20), New SolidBrush(Color.Gray), posx, posy + offset)
         offset += fontHeight + 20
 
-        Dim sql As String = "SELECT tbl_invoice.id_invoice as [id_invoice], tbl_invoice.id_reservation as [id_reservasi] , invoice_status, invoice_day, invoice_date, invoice_desc , total_pembayaran, nama_client FROM tbl_invoice INNER JOIN tbl_client ON tbl_invoice.id_client = tbl_client.id_clien WHERE tbl_invoice.id_invoice = '" + id_invoice + "'"
+        Dim sql As String = "SELECT tbl_invoice.id_invoice as [id_invoice], tbl_invoice.id_reservation as [id_reservasi] , invoice_status, invoice_day, invoice_date, invoice_desc , total_pembayaran, nama_client FROM tbl_invoice INNER JOIN tbl_client ON tbl_invoice.id_client = tbl_client.id_client WHERE tbl_invoice.id_invoice = '" + id_invoice + "'"
         Dim cmnd As New SqlClient.SqlCommand(sql, conn)
         rd = cmnd.ExecuteReader
         rd.Read()
@@ -206,22 +208,40 @@ Public Class ReservationForm
             gp.DrawString(invoice_date, fn, New SolidBrush(Color.Black), posx, posy + offset)
             offset += fontHeight + 30
 
-
         End If
+
+        gp.DrawString("----------------------------------------------------------------------------------------------", fn, New SolidBrush(Color.Black), posx, posy + offset)
+        offset += fontHeight + 10
+        gp.DrawString("ID Tagihan".PadRight(20) + "Kamar ".PadRight(10) + "Type Room".PadRight(40) + "Harga".PadRight(25), fn, New SolidBrush(Color.Black), posx, posy + offset)
+        offset += fontHeight + 10
+        gp.DrawString("----------------------------------------------------------------------------------------------", fn, New SolidBrush(Color.Black), posx, posy + offset)
+        offset += fontHeight + 10
+
 
         rd.Close()
 
 
-        Dim sql_bill As String = "SELECT * FROM tbl_tagihan WHERE id_invoice = '" + id_invoice + "'"
+        Dim sql_bill As String = "SELECT id_tagihan,tbl_tagihan.id_room as id_room,biaya,nama FROM (tbl_tagihan INNER JOIN tbl_room ON tbl_room.id_room = tbl_tagihan.id_room) INNER JOIN tbl_type_room ON tbl_type_room.id_type_room = tbl_room.id_type_room WHERE id_invoice = '" + id_invoice + "'"
         Dim cmnd_bill As New SqlClient.SqlCommand(sql_bill, conn)
         rd = cmnd_bill.ExecuteReader
 
-        rd.Read()
+        While rd.Read()
 
-        If rd.HasRows Then
+            If rd.HasRows Then
 
-        End If
+                Dim id_tagihan As String = rd.Item("id_tagihan")
+                Dim id_room As String = rd.Item("id_room")
+                Dim type_room As String = rd.Item("nama")
+                Dim harga As String = "Rp." + Format(rd.Item("biaya"), "##,##0.00")
 
+
+                gp.DrawString(id_tagihan.PadRight(20) + id_room.PadRight(10) + type_room.PadRight(40) + harga.PadRight(25), fn, New SolidBrush(Color.Black), posx, posy + offset)
+                offset += fontHeight + 10
+
+            End If
+        End While
+
+        rd.Close()
 
         gp.DrawString("--------------------------------------------------------", New Font("Courier New", 20), New SolidBrush(Color.Beige), posx, posy + offset)
         offset += fontHeight + 20
@@ -230,14 +250,5 @@ Public Class ReservationForm
 
     End Sub
 
-    Private Sub generate_bill()
 
-        Dim sql As String = "SELECT * FROM tbl_tagihan WHERE id_invoice = '" + id_invoice + "'"
-        Dim cmnd As New SqlClient.SqlCommand(sql, conn)
-        rd = cmnd.ExecuteReader
-        rd.Read()
-
-
-
-    End Sub
 End Class
