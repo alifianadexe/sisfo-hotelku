@@ -1,4 +1,5 @@
-﻿Public Class LaporanKeuangan
+﻿Imports System.Drawing.Printing
+Public Class LaporanKeuangan
 
     Dim conn As New SqlClient.SqlConnection
     Dim rd As SqlClient.SqlDataReader
@@ -42,4 +43,27 @@
     Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
         refreshData()
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim pd As New PrintDocument
+        AddHandler pd.PrintPage, AddressOf Me.print_page
+        PrintDialog1.Document = pd
+        If PrintDialog1.ShowDialog = DialogResult.OK Then
+            pd.Print()
+        End If
+    End Sub
+
+    Private Sub print_page(ByVal sender As Object, ByVal ev As PrintPageEventArgs)
+        Dim gp As Graphics = ev.Graphics
+        Dim fn As New Font("Courier New", 12)
+
+        Dim myRec As New Rectangle(10, 20, 400, 800)
+
+
+        gp.DrawString("---------------------------------- LAPORAN KEUANGAN -------------------------------", fn, New SolidBrush(Color.Black), 10, 10)
+        chart_keuangan.Printing.PrintPaint(gp, myRec)
+        gp.DrawString("---------------------------------- LAPORAN KEUANGAN -------------------------------", fn, New SolidBrush(Color.Black), 10, 210)
+
+    End Sub
+
 End Class

@@ -85,6 +85,12 @@
     <Compile Include="Admin\Laporan\LaporanKeuangan.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Admin\Laporan\LaporanReservasi.Designer.vb">
+      <DependentUpon>LaporanReservasi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Laporan\LaporanReservasi.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Admin\ManagementClient.Designer.vb">
       <DependentUpon>ManagementClient.vb</DependentUpon>
     </Compile>
@@ -168,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\Laporan\LaporanKeuangan.resx">
       <DependentUpon>LaporanKeuangan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Laporan\LaporanReservasi.resx">
+      <DependentUpon>LaporanReservasi.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\ManagementClient.resx">
       <DependentUpon>ManagementClient.vb</DependentUpon>

@@ -22,35 +22,36 @@ Partial Class LaporanKeuangan
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim ChartArea5 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend5 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series5 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.chart_keuangan = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.data_grid = New System.Windows.Forms.DataGridView()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
         CType(Me.chart_keuangan, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.data_grid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'chart_keuangan
         '
-        ChartArea5.Name = "ChartArea1"
-        Me.chart_keuangan.ChartAreas.Add(ChartArea5)
-        Legend5.BackColor = System.Drawing.Color.Transparent
-        Legend5.Name = "Legend1"
-        Me.chart_keuangan.Legends.Add(Legend5)
+        ChartArea3.Name = "ChartArea1"
+        Me.chart_keuangan.ChartAreas.Add(ChartArea3)
+        Legend3.BackColor = System.Drawing.Color.Transparent
+        Legend3.Name = "Legend1"
+        Me.chart_keuangan.Legends.Add(Legend3)
         Me.chart_keuangan.Location = New System.Drawing.Point(449, 100)
         Me.chart_keuangan.Name = "chart_keuangan"
         Me.chart_keuangan.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones
-        Series5.ChartArea = "ChartArea1"
-        Series5.IsValueShownAsLabel = True
-        Series5.LabelFormat = "##,##0.00"
-        Series5.Legend = "Legend1"
-        Series5.Name = "Uang"
-        Me.chart_keuangan.Series.Add(Series5)
+        Series3.ChartArea = "ChartArea1"
+        Series3.IsValueShownAsLabel = True
+        Series3.LabelFormat = "##,##0.00"
+        Series3.Legend = "Legend1"
+        Series3.Name = "Uang"
+        Me.chart_keuangan.Series.Add(Series3)
         Me.chart_keuangan.Size = New System.Drawing.Size(618, 357)
         Me.chart_keuangan.TabIndex = 0
         Me.chart_keuangan.Text = "Chart1"
@@ -104,6 +105,10 @@ Partial Class LaporanKeuangan
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "Hari : "
         '
+        'PrintDialog1
+        '
+        Me.PrintDialog1.UseEXDialog = True
+        '
         'LaporanKeuangan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -130,4 +135,5 @@ Partial Class LaporanKeuangan
     Friend WithEvents Label1 As Label
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents Label3 As Label
+    Friend WithEvents PrintDialog1 As PrintDialog
 End Class
