@@ -54,5 +54,10 @@
         Dim lapo As New Laporan
         lapo.Show()
         Me.Hide()
+
+    End Sub
+
+    Private Sub NavigationAdmin_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        MainForm.Show()
     End Sub
 End Class

@@ -39,6 +39,7 @@ Public Class ReservationForm
 
                         print_load()
                         MessageBox.Show("Selamat, Anda berhasil memesan kamar ini ", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+                        Me.Close()
                     End If
 
                 End Using

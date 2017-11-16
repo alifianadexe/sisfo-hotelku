@@ -28,20 +28,20 @@ Partial Class ManagementInvoice
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.list_view = New System.Windows.Forms.ListView()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.lbl_total = New System.Windows.Forms.Label()
         Me.lbl_desc = New System.Windows.Forms.Label()
         Me.lbl_id = New System.Windows.Forms.Label()
         Me.lbl_nama = New System.Windows.Forms.Label()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.lbl_total = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.list_view = New System.Windows.Forms.ListView()
         CType(Me.data_grid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'data_grid
@@ -49,6 +49,8 @@ Partial Class ManagementInvoice
         Me.data_grid.AllowUserToAddRows = False
         Me.data_grid.AllowUserToDeleteRows = False
         Me.data_grid.AllowUserToOrderColumns = True
+        Me.data_grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.data_grid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.data_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.data_grid.Location = New System.Drawing.Point(12, 90)
         Me.data_grid.Name = "data_grid"
@@ -109,71 +111,6 @@ Partial Class ManagementInvoice
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Data Invoice"
         '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.list_view)
-        Me.GroupBox2.Location = New System.Drawing.Point(566, 361)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(292, 62)
-        Me.GroupBox2.TabIndex = 6
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Daftar Kamar Dipesan"
-        '
-        'list_view
-        '
-        Me.list_view.Location = New System.Drawing.Point(6, 19)
-        Me.list_view.Name = "list_view"
-        Me.list_view.Size = New System.Drawing.Size(280, 31)
-        Me.list_view.TabIndex = 0
-        Me.list_view.UseCompatibleStateImageBehavior = False
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(6, 60)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(67, 13)
-        Me.Label3.TabIndex = 0
-        Me.Label3.Text = "Nama Client "
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(6, 31)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(71, 13)
-        Me.Label4.TabIndex = 1
-        Me.Label4.Text = "ID Reservasi "
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(6, 90)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(50, 13)
-        Me.Label5.TabIndex = 2
-        Me.Label5.Text = "Deskripsi"
-        '
-        'GroupBox3
-        '
-        Me.GroupBox3.Controls.Add(Me.lbl_total)
-        Me.GroupBox3.Location = New System.Drawing.Point(9, 198)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(277, 61)
-        Me.GroupBox3.TabIndex = 3
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Total Harga"
-        '
-        'lbl_total
-        '
-        Me.lbl_total.Font = New System.Drawing.Font("Gill Sans MT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_total.Location = New System.Drawing.Point(0, 16)
-        Me.lbl_total.Name = "lbl_total"
-        Me.lbl_total.Size = New System.Drawing.Size(277, 42)
-        Me.lbl_total.TabIndex = 0
-        Me.lbl_total.Text = "Label6"
-        Me.lbl_total.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'lbl_desc
         '
         Me.lbl_desc.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -203,6 +140,71 @@ Partial Class ManagementInvoice
         Me.lbl_nama.TabIndex = 4
         Me.lbl_nama.Text = "Nama Client "
         '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.lbl_total)
+        Me.GroupBox3.Location = New System.Drawing.Point(9, 198)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(277, 61)
+        Me.GroupBox3.TabIndex = 3
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Total Harga"
+        '
+        'lbl_total
+        '
+        Me.lbl_total.Font = New System.Drawing.Font("Gill Sans MT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_total.Location = New System.Drawing.Point(0, 16)
+        Me.lbl_total.Name = "lbl_total"
+        Me.lbl_total.Size = New System.Drawing.Size(277, 42)
+        Me.lbl_total.TabIndex = 0
+        Me.lbl_total.Text = "Label6"
+        Me.lbl_total.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(6, 90)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(50, 13)
+        Me.Label5.TabIndex = 2
+        Me.Label5.Text = "Deskripsi"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(6, 31)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(71, 13)
+        Me.Label4.TabIndex = 1
+        Me.Label4.Text = "ID Reservasi "
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(6, 60)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(67, 13)
+        Me.Label3.TabIndex = 0
+        Me.Label3.Text = "Nama Client "
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.list_view)
+        Me.GroupBox2.Location = New System.Drawing.Point(566, 361)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(292, 62)
+        Me.GroupBox2.TabIndex = 6
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Daftar Kamar Dipesan"
+        '
+        'list_view
+        '
+        Me.list_view.Location = New System.Drawing.Point(6, 19)
+        Me.list_view.Name = "list_view"
+        Me.list_view.Size = New System.Drawing.Size(280, 31)
+        Me.list_view.TabIndex = 0
+        Me.list_view.UseCompatibleStateImageBehavior = False
+        '
         'ManagementInvoice
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -220,8 +222,8 @@ Partial Class ManagementInvoice
         CType(Me.data_grid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

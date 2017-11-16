@@ -43,3 +43,4 @@ C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\sisfo-hotelku\Sisf
 C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\sisfo-hotelku\SisfoHotelku\obj\Debug\SisfoHotelku.MainForm.resources
 C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\sisfo-hotelku\SisfoHotelku\obj\Debug\SisfoHotelku.Resources.resources
 C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\sisfo-hotelku\SisfoHotelku\obj\Debug\SisfoHotelku.vbproj.GenerateResource.Cache
+C:\Users\AdexeAmih\Documents\VisualStudioProject\SisfoHotelku\sisfo-hotelku\SisfoHotelku\obj\Debug\SisfoHotelku.LaporanClient.resources

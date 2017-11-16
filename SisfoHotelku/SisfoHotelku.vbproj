@@ -79,6 +79,12 @@
     <Compile Include="Admin\Laporan\Laporan.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Admin\Laporan\LaporanClient.Designer.vb">
+      <DependentUpon>LaporanClient.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Laporan\LaporanClient.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Admin\Laporan\LaporanKeuangan.Designer.vb">
       <DependentUpon>LaporanKeuangan.vb</DependentUpon>
     </Compile>
@@ -171,6 +177,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Admin\Laporan\Laporan.resx">
       <DependentUpon>Laporan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Laporan\LaporanClient.resx">
+      <DependentUpon>LaporanClient.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\Laporan\LaporanKeuangan.resx">
       <DependentUpon>LaporanKeuangan.vb</DependentUpon>

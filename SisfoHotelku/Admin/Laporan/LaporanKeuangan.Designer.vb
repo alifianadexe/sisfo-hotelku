@@ -22,9 +22,9 @@ Partial Class LaporanKeuangan
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.chart_keuangan = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.data_grid = New System.Windows.Forms.DataGridView()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -38,20 +38,20 @@ Partial Class LaporanKeuangan
         '
         'chart_keuangan
         '
-        ChartArea3.Name = "ChartArea1"
-        Me.chart_keuangan.ChartAreas.Add(ChartArea3)
-        Legend3.BackColor = System.Drawing.Color.Transparent
-        Legend3.Name = "Legend1"
-        Me.chart_keuangan.Legends.Add(Legend3)
+        ChartArea4.Name = "ChartArea1"
+        Me.chart_keuangan.ChartAreas.Add(ChartArea4)
+        Legend4.BackColor = System.Drawing.Color.Transparent
+        Legend4.Name = "Legend1"
+        Me.chart_keuangan.Legends.Add(Legend4)
         Me.chart_keuangan.Location = New System.Drawing.Point(449, 100)
         Me.chart_keuangan.Name = "chart_keuangan"
         Me.chart_keuangan.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones
-        Series3.ChartArea = "ChartArea1"
-        Series3.IsValueShownAsLabel = True
-        Series3.LabelFormat = "##,##0.00"
-        Series3.Legend = "Legend1"
-        Series3.Name = "Uang"
-        Me.chart_keuangan.Series.Add(Series3)
+        Series4.ChartArea = "ChartArea1"
+        Series4.IsValueShownAsLabel = True
+        Series4.LabelFormat = "##,##0.00"
+        Series4.Legend = "Legend1"
+        Series4.Name = "Uang"
+        Me.chart_keuangan.Series.Add(Series4)
         Me.chart_keuangan.Size = New System.Drawing.Size(618, 357)
         Me.chart_keuangan.TabIndex = 0
         Me.chart_keuangan.Text = "Chart1"
@@ -61,6 +61,8 @@ Partial Class LaporanKeuangan
         Me.data_grid.AllowUserToAddRows = False
         Me.data_grid.AllowUserToDeleteRows = False
         Me.data_grid.AllowUserToOrderColumns = True
+        Me.data_grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.data_grid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.data_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.data_grid.Location = New System.Drawing.Point(12, 100)
         Me.data_grid.Name = "data_grid"

@@ -57,7 +57,7 @@ Public Class LaporanKeuangan
         Dim gp As Graphics = ev.Graphics
         Dim fn As New Font("Courier New", 12)
 
-        Dim myRec As New Rectangle(10, 20, 400, 800)
+        Dim myRec As New Rectangle(10, 20, 800, 400)
 
 
         gp.DrawString("---------------------------------- LAPORAN KEUANGAN -------------------------------", fn, New SolidBrush(Color.Black), 10, 10)
